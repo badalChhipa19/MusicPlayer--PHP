@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World &mdash; Music</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upperPart">
+        <div class="leftNav">
+          <div class="iconPart">
+            <img
+              src="https://cdn0.iconfinder.com/data/icons/internet-2020/1080/Applemusicandroid-512.png"
+              alt="icon"
+            />
+          </div>
+          <div class="navlists">
+            <div class="nav-list" style="display: flex; align-items: center">
+              <svg
+                class="note_icon"
+                style="height: 2rem; width: 2rem; fill: white; cursor: pointer"
+              >
+                <use xlink:href="img/sprite.svg#icon-beamed-note"></use>
+              </svg>
+              <!-- <span class="material-icons"> headset </span>&nbsp; -->
+              &nbsp;Explore
+            </div>
+            <div class="nav-list">
+              <svg
+                class="browser_icon"
+                style="height: 2rem; width: 2rem; fill: white; cursor: pointer"
+              >
+                <use xlink:href="img/sprite.svg#icon-grid"></use>
+              </svg>
+              Browser
+            </div>
+          </div>
+          <div class="navlists">
+            <span class="headline">My Library</span>
+            <div class="nav-list">
+              <svg
+                class="heart0_icon"
+                style="height: 2rem; width: 2rem; fill: white; cursor: pointer"
+              >
+                <use xlink:href="img/sprite.svg#icon-heart"></use>
+              </svg>
+              My Favorite
+            </div>
+            <div class="nav-list">
+              <svg
+                class="bar-graph_icon"
+                style="height: 2rem; width: 2rem; fill: white; cursor: pointer"
+              >
+                <use xlink:href="img/sprite.svg#icon-bar-graph"></use>
+              </svg>
+              Personal Ranking
+            </div>
+            <div class="nav-list">
+              <svg
+                class="icon icon-download"
+                style="height: 2rem; width: 2rem; fill: white; cursor: pointer"
+              >
+                <use xlink:href="img/sprite.svg#icon-download"></use>
+              </svg>
+              Download
+            </div>
+            <div class="nav-list" style="display: flex; align-items: center">
+              <span
+                class="material-symbols-outlined"
+                style="padding-right: 0.61rem"
+              >
+                history</span
+              >
+              History
+            </div>
+          </div>
+          <div class="navlists" style="width: 100%; margin-top: -1rem">
+            <span class="headline" style="font-size: 1.9rem"
+              >My Playlist
+              <svg
+                class="icon icon-download"
+                style="
+                  height: 1.7rem;
+                  width: 1.7rem;
+                  fill: white;
+                  cursor: pointer;
+                  margin-left: 40%;
+                "
+              >
+                <use xlink:href="img/sprite.svg#icon-add-to-list"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="right__container">
+          <div class="topNav">
+            <span class="material-symbols-outlined" id="backArrow">
+              arrow_back_ios
+            </span>
+
+            <span class="material-symbols-outlined" id="frontArrow">
+              arrow_forward_ios
+            </span>
+
+            <span class="searchSongs">
+              <span class="material-symbols-outlined"> search </span>
+              <input
+                type="text"
+                placeholder="Search your Favorite Songs here"
+              />
+            </span>
+
+            <span class="accountEditIcon">
+              <div class="accountIcon">
+                <span class="material-symbols-outlined" id="accountIcon">
+                  account_circle
+                </span>
+              </div>
+              <div class="dotsIcon">
+                <span class="material-symbols-outlined" id="dotsIcon">
+                  more_horiz
+                </span>
+              </div>
+            </span>
+          </div>
+
+          <!-- -----------------------------------------MAAAIN BODYYYYYYYYYYYYYYYYYYYYY STARTS HERRRRRRRRRRRRRRRRRE -->
+          <div class="mainBody">
+            <div class="greeting__song"></div>
+            <div class="song__list"></div>
+          </div>
+          <!-- -----------------------------------------MAAAIN BODYYYYYYYYYYYYYYYYYYYYY EENDDS HERRRRRRRRRRRRRRRRRE -->
+        </div>
+      </div>
+
+      <div class="lowerPart">
+        <!-- line that will run when music is played -->
+        <hr class="musicPlayed" />
+        <!-- Song parent-container start-->
+        <div class="currentMusic">
+          <!-- singer photo container start-->
+          <div class="musicImageDiv">
+            <!--ex:  billie-eilish-blood.gif  ,https://s3images.zee5.com/wp-content/uploads/2022/01/zayynuuumsdfs2022011512393420220115124425.jpg-->
+            <!-- singer img start-->
+            <img
+              class="singerFace"
+              src="https://s3images.zee5.com/wp-content/uploads/2022/01/zayynuuumsdfs2022011512393420220115124425.jpg"
+              alt="singerImg"
+            />
+            <!-- singer img end-->
+          </div>
+          <!-- singer photo container end-->
+
+          <!-- song Name Div start -->
+
+          <div class="songInfo">
+            <div class="song">
+              <div class="songName">Night Changes</div>
+              <div class="singerName">Zayn Malik</div>
+            </div>
+            <div class="heartMenuIcon">
+              <!-- heart icon start -->
+              <div class="heart">
+                <svg class="heart_icon" onclick="fillHeartIcon()">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </div>
+              <!-- heart icon end -->
+              <!-- menu icon start -->
+
+              <div class="menu">
+                <svg class="menu_icon" onclick="fillMenuIcon()">
+                  <use
+                    xlink:href="img/sprite.svg#icon-dots-three-horizontal"
+                  ></use>
+                </svg>
+              </div>
+              <!-- menu icon end -->
+              <!-- menu box appear when menu icon is clicked ////////////start -->
+              <div class="menuContainer">
+                <div class="menu-list">Add to my Playlist</div>
+                <div class="menu-list">Download</div>
+                <div class="menu-list">Share to</div>
+                <hr class="menuHr" />
+                <!-- <div class="menu-list"><hr /></div> -->
+                <div class="menu-list">View Comment</div>
+                <div class="menu-list">View artist</div>
+                <div class="menu-list">View album</div>
+                <div
+                  class="menu-list"
+                  id="hideMenuElement"
+                  onclick="fillMenuIcon()"
+                >
+                  Exit
+                </div>
+              </div>
+              <!-- menu box appear when menu icon is clicked ////////////end -->
+            </div>
+          </div>
+
+          <!-- center music player controller starts-->
+          <div class="musicPlayerController">
+            <div class="shuffle">
+              <svg class="shuffle_icon" onclick="onShuffle()">
+                <use
+                  id="shuffle_icon"
+                  xlink:href="img/sprite.svg#icon-shuffle"
+                ></use>
+              </svg>
+            </div>
+            <div class="previous">
+              <svg class="previousSong_icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-controller-jump-to-start"
+                ></use>
+              </svg>
+            </div>
+            <div class="resume">
+              <svg class="resume_icon" onclick="onResume()">
+                <use
+                  id="resume_icon"
+                  xlink:href="img/sprite.svg#icon-controller-paus"
+                ></use>
+              </svg>
+            </div>
+            <div class="next">
+              <svg class="next_icon">
+                <use xlink:href="img/sprite.svg#icon-controller-next"></use>
+              </svg>
+            </div>
+            <div class="loop">
+              <svg class="loop_icon" onclick="onLoop()">
+                <use id="loop_icon" xlink:href="img/sprite.svg#icon-loop"></use>
+              </svg>
+            </div>
+          </div>
+          <!-- center music player controller ends-->
+
+          <!-- end of the bottom where time sound and queue is there------------- starts  volume_down volume_off-->
+          <div class="timeSoundQueue">
+            <div class="timeCount">00:30 / 01:30</div>
+            <div class="sound">
+              <span
+                id="volume_icon"
+                class="material-symbols-outlined"
+                style="cursor: pointer"
+                onclick="onVolume()"
+              >
+                volume_up
+              </span>
+            </div>
+            <div class="queue">
+              <span
+                id="queue_icon"
+                class="material-symbols-outlined"
+                style="cursor: pointer"
+                onclick="onQueue()"
+              >
+                queue_music
+              </span>
+            </div>
+            <div class="queueContainer" onclick="onQueue()">
+              <div class="queue-headline h1">Queue</div>
+              <div class="queue-headline h2">
+                <small>
+                  <b style="color: grey"> Playing from </b>
+                  <!-- here it's not always the singer name , it can be album of 19s or top hindi .. or in other words from where the song has been picked  -->
+                  <span class="singer-name">Zayn Malik</span>
+                </small>
+              </div>
+
+              <!-- current song will be at first in queue list start  -->
+              <div class="songsInQueuePlaying Q0">
+                <div class="songImage">
+                  <img
+                    class="singerPhoto"
+                    src="https://s3images.zee5.com/wp-content/uploads/2022/01/zayynuuumsdfs2022011512393420220115124425.jpg"
+                    alt="singerPhoto"
+                  />
+                </div>
+                <div class="songsDetail">
+                  <div class="songName">Night Changes</div>
+                  <div class="singerName">Zayn Malik</div>
+                </div>
+                <div class="songTime">02:55</div>
+              </div>
+              <!-- current song will be at first in queue list end  -->
+
+              <div class="queue-headline-h2">Up Next</div>
+              <!-- first upcoming Song starts-->
+              <div class="songsInQueuePlaying Q1">
+                <div class="songImage">
+                  <img
+                    class="singerPhoto"
+                    src="https://news24online.com/wp-content/uploads/2022/11/u2nauswntks.jpg"
+                    alt="singerPhoto"
+                  />
+                </div>
+                <div class="songsDetail">
+                  <div class="songName">Apna Bana Le</div>
+                  <div class="singerName">Sachin–Jigar, Arijit Singh</div>
+                </div>
+                <div class="songTime">03:38</div>
+              </div>
+              <!-- first song coming ends -->
+
+              <!-- second upcoming Song starts-->
+              <div class="songsInQueuePlaying Q2">
+                <div class="songImage">
+                  <img
+                    class="singerPhoto"
+                    src="https://consequence.net/wp-content/uploads/2019/01/billie-eilish-debut-album-title-when-we-fall-asleep.png"
+                    alt="singerPhoto"
+                  />
+                </div>
+                <div class="songsDetail">
+                  <div class="songName">Bad Guy</div>
+                  <div class="singerName">Billie Eilish</div>
+                </div>
+                <div class="songTime">03:10</div>
+              </div>
+              <!-- second song coming ends -->
+              <!-- third upcoming Song starts-->
+              <div class="songsInQueuePlaying Q3">
+                <div class="songImage">
+                  <img
+                    class="singerPhoto"
+                    src="https://i.pinimg.com/736x/20/5c/ba/205cbac23f6b83395a4d2aea654bd6d6.jpg"
+                    alt="singerPhoto"
+                  />
+                </div>
+                <div class="songsDetail">
+                  <div class="songName">Watermelon Sugar</div>
+                  <div class="singerName">Harry Styles</div>
+                </div>
+                <div class="songTime">03:08</div>
+              </div>
+              <!-- third song coming ends -->
+
+              <!-- fourth upcoming Song starts-->
+              <div class="songsInQueuePlaying Q4">
+                <div class="songImage">
+                  <img
+                    class="singerPhoto"
+                    src="
+              https://pbs.twimg.com/media/FptPkHiXoAAlwl8.jpg
+              "
+                    alt="singerPhoto"
+                  />
+                </div>
+                <div class="songsDetail">
+                  <div class="songName">Die For You (Remix)</div>
+                  <div class="singerName">The Weeknd, Ariana Grande</div>
+                </div>
+                <div class="songTime">03:08</div>
+              </div>
+              <!-- fourth song coming ends -->
+
+              <!-- fifth upcoming Song starts-->
+              <div class="songsInQueuePlaying Q5">
+                <div class="songImage">
+                  <img
+                    class="singerPhoto"
+                    src="https://img.etimg.com/thumb/msid-97648334,width-1200,height-900,imgsize-86590,overlay-etpanache/photo.jpg"
+                    alt="singerPhoto"
+                  />
+                </div>
+                <div class="songsDetail">
+                  <div class="songName">Jhoome jo Pathan</div>
+                  <div class="singerName">Arjit singh</div>
+                </div>
+                <div class="songTime">03:08</div>
+              </div>
+              <!-- fifth song coming ends -->
+
+              <div class="recommendationLine">
+                Keep Listening for more recommendation
+              </div>
+            </div>
+          </div>
+          <!-- end of the bottom where time sound and queue is there------------- ends -->
+
+          <!-- song Name Div end -->
+        </div>
+        <!-- Song parent-container end-->
+      </div>
+    </div>
+  </body>
+</html>
